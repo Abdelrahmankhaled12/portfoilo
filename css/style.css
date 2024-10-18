@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Start Variables */
+:root {
+    --main-color: #242424;
+    --secondary-color: #434343;
+    --section-padding: 80px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Roboto";
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    background: #f6f6f6;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 30px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 980px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1180px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .container {
+        width: 1300px;
+    }
+}
+.buttonScroll {
+    position: fixed;
+    bottom: 45px;
+    right: 60px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 4;
+}
+
+.buttonScroll:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+
+.buttonScroll i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+}
+
+
+/* Start Header */
+header {
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 10px 15px 10px !important;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+
+header .logo img {
+    width: 130px;
+}
+
+header a {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+header a:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+
+/* End Header */
+/* Start LANDING */
+.landing {
+    padding: 50px 0px;
+    overflow: hidden;
+}
+
+.landing .grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 50px;
+}
+
+@media(max-width:992px) {
+    .landing .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+.landing .text .available {
+    background-color: #ddebee;
+    width: fit-content;
+    padding: 8px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.landing .text .available span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #50a9a9;
+    display: block;
+}
+
+.landing .text .available p {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 0;
+    color: #50a9a9;
+    font-weight: 500;
+}
+
+
+.landing .text h1 {
+    font-size: 80px;
+    color: var(--main-color);
+    margin: 20px 0px;
+}
+
+@media(max-width:992px) {
+    .landing .text h1 {
+        font-size: 50px;
+    }
+}
+
+@media(max-width:767px) {
+    .landing .text h1 {
+        font-size: 40px;
+    }
+}
+
+.landing .text .paragraph {
+    color: #94949a;
+    line-height: 1.7;
+}
+
+.landing .text a {
+    display: block;
+    width: fit-content;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+    font-size: 16px;
+    margin: 30px 0px;
+}
+
+.landing .text a:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+
+@media(max-width:767px) {
+    .landing .text a {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+}
+
+.landing .partTwo .image img {
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+}
+
+@media(max-width:767px) {
+    .landing .partTwo .image img {
+        width: 100%;
+    }
+}
+
+.landing .partTwo .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.landing .partTwo .links a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.landing .partTwo .links a:hover {
+    transform: scale(1.2);
+}
+
+.landing .mission {
+    background-color: #119fb1;
+    padding: 5px 25px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+
+.landing .mission p {
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* End Landing */
+/* Start Section How Can I Assits  */
+.howCan {
+    padding: 60px 0px;
+}
+
+.howCan .flex {
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width: 767px) {
+    .howCan .flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 767px) {
+    .howCan .flex .text {
+        position: sticky;
+        top: 40px;
+        height: fit-content;
+    }
+}
+
+.howCan .flex .text h1 {
+    font-size: 40px;
+    color: var(--main-color);
+    margin: 0px 0px 10px;
+}
+
+.howCan .flex .boxes {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 1180px) {
+    .howCan .flex .boxes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.howCan .flex .boxes .box {
+    background-color: #ffffff;
+    padding: 25px 20px 2px;
+    border-radius: 15px;
+}
+
+.howCan .flex .boxes .box .top {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.howCan .flex .boxes .box .top .icon {
+    background-color: #eef1f5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #7c74f1;
+    font-size: 19px;
+}
+
+.howCan .flex .boxes .box .top p {
+    flex: 1;
+    margin: 0;
+    color: #94949a;
+    line-height: 1.5;
+}
+
+.howCan .flex .boxes .box .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.howCan .flex .boxes .box .footer h2 {
+    color: var(--main-color);
+}
+
+.howCan .flex .boxes .box .footer span {
+    color: #94949a;
+    font-weight: 600;
+    font-size: 25px;
+}
+/* End Section How Can I Assits  */
+/* Start Section Selected Work  */
+.selectedWork {
+    padding: 60px 0px;
+}
+
+.selectedWork .flex {
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width: 767px) {
+    .selectedWork .flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 767px) {
+    .selectedWork .flex .text {
+        position: sticky;
+        top: 40px;
+        height: fit-content;
+    }
+}
+
+.selectedWork .flex .text h1 {
+    font-size: 40px;
+    color: var(--main-color);
+    margin: 0px 0px 10px;
+}
+
+.selectedWork .flex .boxes {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.selectedWork .flex .boxes .box {
+    background-color: #ffffff;
+    padding: 25px 20px 25px;
+    border-radius: 15px;
+}
+
+.selectedWork .flex .boxes .box .image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.selectedWork .flex .boxes .box .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selectedWork .flex .boxes .box .top p {
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.selectedWork .flex .boxes .box .top span {
+    color: #94949a;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.selectedWork .flex .boxes .box ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 5px 0px 0px;
+}
+
+.selectedWork .flex .boxes .box ul  li {
+    background-color: #ddebee;
+    width: fit-content;
+    padding: 8px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #50a9a9;
+}
+
+
+.selectedWork .flex .boxes .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .selectedWork .flex .boxes .grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* End Section How Can I Assits  */
+/* Start Experience */
+.experience {
+    padding: 50px 0px;
+}
+
+.experience .boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 992px) {
+    .experience .boxes {
+        grid-template-columns: 1fr;
+    }
+}
+.experience .boxes .box {
+    background-color: #ffffff;
+    padding: 25px 20px 25px;
+    border-radius: 15px;
+}
+
+.experience .boxes .box h1 {
+    color: var(--main-color);
+    font-size: 45px;
+    margin: 0px 0px 30px;
+}
+
+.experience .boxes .box a {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+.experience .boxes .box a:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+
+.experience .boxes .box h2 {
+    color: var(--main-color);
+    font-size: 22px;
+    margin: 0px 0px 8px;
+}
+
+
+.experience .boxes .box span {
+    font-size: 13px;
+    color: #777;
+    font-weight: 500;
+}
+
+.experience .boxes .box p {
+    font-size: 15px;
+    color: #94949a;
+    line-height: 1.5;
+    margin: 10px 0px 0px;
+}
+
+/* End Experience */
+/* Start Testimonials */
+.testimonials {
+    padding: 50px 0px;
+}
+
+.testimonials .title h1 {
+    color: var(--main-color);
+    font-size: 40px;
+    text-align: center;
+}
+
+.testimonials .boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 992px) {
+    .testimonials .boxes {
+        grid-template-columns: 1fr;
+    }
+}
+.testimonials .boxes .box {
+    background-color: #ffffff;
+    padding: 25px 15px 10px;
+    border-radius: 20px;
+    box-shadow: 0 4.23px 12px 3px #ababab18;
+}
+
+.testimonials .boxes .box .top {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #0000001a;
+}
+
+.testimonials .boxes .box .top .image img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.testimonials .boxes .box .top .text h3 {
+    margin: 5px 0px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.testimonials .boxes .box .top .text p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+    font-weight: 500;
+}
+
+.testimonials .boxes .box .body p {
+    font-size: 15px;
+    color: #94949a;
+    line-height: 1.5;
+}
+
+/* End Testimonials */
+/* Start Footer */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    color: var(--main-color);
+    padding: 20px 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* End Footer */
+
+/* Start Section Contact */
+.contact {
+    padding: 50px 0px 20px;
+}
+
+.contact .content {
+    background-color: #e0e4fc;
+    padding: 30px 25px;
+    border-radius: 15px;
+    margin: 30px 0px;
+}
+.contact .content .title {
+    text-align: center;
+}
+
+.contact .content .title h1 {
+    color: var(--main-color);
+    margin: 5px 0px;
+}
+
+.contact .content .title  p {
+    font-size: 15px;
+    color: var(--main-color);
+}
+
+.contact form {
+    width: 70%;
+    margin: auto;
+}
+
+@media (max-width: 992px) {
+    .contact form {
+        width: 100%;
+        margin: auto;
+    }
+}
+.contact .flex {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+@media (max-width: 650px) {
+    .contact .flex {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+.contact .div {
+    position: relative;
+    flex: 1;
+}
+
+.contact .div input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: 1px solid #77777725;
+    outline: none;
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    background-color: #ffffffa7;
+}
+
+.contact .div input::placeholder {
+    font-size: 14px;
+}
+
+.contact .div textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 20px;
+    border: 1px solid #77777725;
+    outline: none;
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    resize: none;
+    background-color: #ffffffa7;
+}
+
+.contact .div textarea::placeholder {
+    font-size: 14px;
+}
+
+.contact button {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: white;
+    height: 45px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: block;
+    margin: 5px auto;
+}
+
+.contact button:hover {
+    background-color: white;
+    color: var(--main-color);
+}
