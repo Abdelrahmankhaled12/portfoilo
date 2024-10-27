@@ -195,7 +195,7 @@ header a:hover {
 
 
 .landing .text h1 {
-    font-size: 80px;
+    font-size: 60px;
     color: var(--main-color);
     margin: 20px 0px;
 }
@@ -291,7 +291,7 @@ header a:hover {
 
 
 .landing .mission p {
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -492,15 +492,12 @@ header a:hover {
 }
 /* End Section How Can I Assits  */
 /* Start Experience */
-.experience {
-    padding: 50px 0px;
-}
-
 .experience .boxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+
 @media (max-width: 992px) {
     .experience .boxes {
         grid-template-columns: 1fr;
@@ -616,18 +613,6 @@ header a:hover {
 }
 
 /* End Testimonials */
-/* Start Footer */
-footer {
-    background-color: #ffffff;
-    text-align: center;
-    color: var(--main-color);
-    padding: 20px 0px;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-/* End Footer */
-
 /* Start Section Contact */
 .contact {
     padding: 50px 0px 20px;
@@ -732,3 +717,15 @@ footer {
     background-color: white;
     color: var(--main-color);
 }
+/* End Contact */
+/* Start Footer */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    color: var(--main-color);
+    padding: 20px 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+/* End Footer */
+
